@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>outra pagina-2</title>
+  <link rel="stylesheet"href = "css/estilo.css">
+  
+  <title>Minha página</title>
+  <meta charset="UTF-8">
+  <style>
+     #audio-trigger {
+      
+      color: rgb(7, 1, 1);
+      font-size: 20px;
+      text-align: center;
+      width: 200px;
+      padding: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    #audio-trigger:hover{color: red;}
+    audio::-webkit-media-controls-start-playback-button {
+      display: none!important;
+    }
+
+    audio::-webkit-media-controls-enclosure {
+      overflow:hidden!important;
+      
+     width:0!important;
+      height:0!important;
+    }
+  </style>
+</head>
+<body class="bac">
+   
+  <div class="dog">
+   
+
+  <h1>HAKER INVASION 2</h1>
+  <H3>year 3050</H3> </div>
+   
+  <a class="e3" href="outra pagina.html">ir para outra pagina</a>
+  <a class="e3" href="index.html">voltar para index</a> <br>
+   
+  
+  
+  <div  id="audio-trigger">Clique aqui para tocar o áudio</div>
+  <audio id="meu-audio">
+    <source src="audio-css/WhatsApp Audio 2023-02-13 at 00.05.14.mpeg" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <button id="pause-audio" style="display:none">Pausar áudio</button>
+   
+
+  <script>
+    var audioTrigger = document.getElementById("audio-trigger");
+    var audio = document.getElementById("meu-audio");
+    var pauseButton = document.getElementById("pause-audio");
+
+    audio.style.display = "none";
+
+    audioTrigger.addEventListener("click", function() {
+      audio.style.display = "block";
+      audio.play();
+      audioTrigger.style.display = "none";
+      pauseButton.style.display = "block";
+    });
+
+    pauseButton.addEventListener("click", function() {
+      audio.pause();
+      audioTrigger.style.display = "block";
+      audio.style.display = "none";
+      pauseButton.style.display = "none";
+    });
+  </script>
+   
+</html>
+
+
+    
+    
